@@ -29,9 +29,9 @@ function MothsMatter() {
 Receive updates on future NFTs, and consult with each other. A percentage of all NFT sales will contribute to the evolution of each project, giving each NFT owner a piece of the action.</p>
             </Head>
             <Body>
-                <LeftTwo>
+                {/* <LeftTwo>
                 <img src='./images/MW.gif' />
-            </LeftTwo>
+            </LeftTwo> */}
             <RightTwo>
             <SocialIcons>
        <a href='https://discord.com/'><FaDiscord style={{color: '#fff', margin: '0 30px '}}/></a> 
@@ -213,7 +213,7 @@ const LeftTwo = styled.div`
 `
 
 const RightTwo = styled.div`
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
