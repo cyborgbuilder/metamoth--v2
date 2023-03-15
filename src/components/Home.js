@@ -87,7 +87,8 @@ const Right = styled.div`
     font-family: 'Unbounded', cursive;
     color: #1b1b1b;
     text-align: center;
-    font-size: 75px;
+    font-size: 79px;
+    text-decoration: underline;
     letter-spacing: 1.3px;
 
     @media only screen and (max-width: 1200px){
@@ -101,7 +102,7 @@ const Right = styled.div`
     text-align: center;
     font-size: 20px;
     line-height: 1.4;
-    margin-top: 20px;
+    margin-top: 40px;
 
     @media only screen and (max-width: 1200px){
       font-size: 16px;
