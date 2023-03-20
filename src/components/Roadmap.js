@@ -245,7 +245,7 @@ function Roadmaps() {
                    <Fade left>
                    <AlignRight>
                    <h1>In Progress</h1>
-                   <img src='/images/loading.png' />
+                   <img src='/images/loading.png' style={{animation:'rotation 4s infinite linear'}}/>
                    </AlignRight>
                    </Fade>
                 </SlotLeft>
@@ -332,6 +332,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+
 `
 
 const Wrap = styled.div`
@@ -407,7 +408,7 @@ const SlotLeft = styled.div`
         align-items: center;
       }
     img{
-        width: 45px;
+        width: 35px;
         margin: 0 10px;
     }
     h1{
@@ -473,7 +474,7 @@ const SlotRight = styled.div`
           }
     }
     img{
-        width: 45px;
+        width: 35px;
         margin: 0 20px;
     }
     h1{

@@ -34,10 +34,10 @@ Receive updates on future NFTs, and consult with each other. A percentage of all
             </LeftTwo> */}
             <RightTwo>
             <SocialIcons>
-       <a href='https://discord.com/'><FaDiscord style={{color: '#fff', margin: '0 30px '}}/></a> 
-        <a href='https://twitter.com/j10hunter'><FaTwitter style={{color: '#fff', margin: '0 30px '}} /></a>
-          <a href='https://t.me/Metamoths'><FaTelegram style={{color: '#fff', margin: '0 30px '}}/></a>
-          <a href='https://www.instagram.com/Metamoths'><FaInstagram style={{color: '#fff', margin: '0 30px '}}/></a>
+                <a href='https://discord.com/'><FaDiscord style={{color: '#fff', margin: '0 30px '}}/></a> 
+                <a href='https://twitter.com/j10hunter'><FaTwitter style={{color: '#fff', margin: '0 30px '}} /></a>
+                <a href='https://t.me/Metamoths'><FaTelegram style={{color: '#fff', margin: '0 30px '}}/></a>
+                <a href='https://www.instagram.com/Metamoths'><FaInstagram style={{color: '#fff', margin: '0 30px '}}/></a>
        </SocialIcons>
             </RightTwo>
             </Body>
@@ -49,13 +49,18 @@ Receive updates on future NFTs, and consult with each other. A percentage of all
 
 const Container = styled.div`
     width: 100%;
-    height: 220vh;
+    min-height: 220vh;
     position: relative;
-    background-image: linear-gradient(to left top, #5c82e8, #6177d8, #646bc8, #6561b8, #6456a8, #6f59a8, #785ca8, #8160a8, #9872b8, #af85c9, #c798da, #deaceb);
+    background-image: linear-gradient(to left bottom, #5c82e8, #6177d8, #646bc8, #6561b8, #6456a8, #6f59a8, #785ca8, #8160a8, #9872b8, #af85c9, #c798da, #deaceb);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border-top: 3px solid hsla(224, 75%, 64%, 1);
+
+    @media only screen and (max-width: 1200px){
+        height: 260vh;
+    }
 
 
     &:before{
@@ -87,11 +92,16 @@ const Wrap = styled.div`
 const Header = styled.div`
 
 h1{
-    color: black;
+    color: #fff;
     text-align: center;
     font-size: 90px;
     font-family: 'Unbounded', cursive;
     padding: 20px 0;
+
+    @media only screen and (max-width: 1200px){
+        font-size: 40px;
+        margin: 10px 0;
+    }
 }
 
 
@@ -107,6 +117,11 @@ const Content = styled.div`
     background: white;
         opacity: 0.8;
         border-radius: 15px;
+
+        @media only screen and (max-width: 1200px){
+            padding: 0;
+            flex-direction: column;
+        }
     
 
 `
@@ -115,11 +130,20 @@ const Left = styled.div`
     width: 60%;
     height: 80vh;
 
+    @media only screen and (max-width: 1200px){
+        width: 100%;
+    }
+
     h2{
         color: black;
         font-size: 40px;
         text-align: center;
-        font-family: 'Chakra Petch', sans-serif;;
+        font-family: 'Chakra Petch', sans-serif;
+
+        @media only screen and (max-width: 1200px){
+            font-size: 30px;
+            padding: 10px 0;
+        }
         
     }
 
@@ -130,12 +154,21 @@ const Left = styled.div`
         line-height: 2.1rem;
         letter-spacing: 1.2px;
         font-family: 'Chakra Petch', sans-serif;;
+
+        @media only screen and (max-width: 1200px){
+            font-size: 19px;
+            padding: 10px;
+        }
         
     }
 
     img{
         width: 14%;
         margin-left: 30px;
+
+        @media only screen and (max-width: 1200px){
+            width: 18%;
+        }
     }
 
 
@@ -152,6 +185,10 @@ const Right = styled.div`
         position: absolute;
         bottom: 0;
         right: 0px;
+
+        @media only screen and (max-width: 1200px){
+            width: 60%;
+        }
         
     }
 
@@ -162,7 +199,12 @@ const Footer = styled.div`
     height: 80vh;
     display: flex;
     flex-direction: column;
-    padding: 40px 20px;
+    padding: 90px 20px;
+
+    @media only screen and (max-width: 1200px){
+        width: 100%;
+        padding: 90px 10px;
+    }
 
 `
 
@@ -177,6 +219,11 @@ const Head = styled.div`
     h1{
         font-size: 60px;
         font-family: 'Unbounded', cursive;
+
+        @media only screen and (max-width: 1200px){
+            font-size: 45px;
+            margin: 30px 0;
+        }
     }
 
     p{
@@ -185,6 +232,11 @@ const Head = styled.div`
         font-family: 'Chakra Petch', sans-serif;;
         line-height: 2.1rem;
         letter-spacing: 1.3px;
+
+        @media only screen and (max-width: 1200px){
+            width: 100%;
+            padding: 30px 0;
+        }
 
 
     }
@@ -231,6 +283,12 @@ const SocialIcons = styled.div`
   //border: 1px solid white;
  // border-radius: 15px;
   padding: 20px;
+
+  @media only screen and (max-width: 1200px){
+    font-size: 80px;
+    flex-wrap: wrap;
+    padding: 0;
+}
 
 `
 export default MothsMatter

@@ -208,14 +208,20 @@ const Down = styled.div`
   background: #5985ff;
   z-index: 1000;
 
+  @media only screen and (max-width: 1200px){
+    padding: 10px 15px;
+  }
+
   p{
     color: black;
-    font-size: 18.4px;
-    letter-spacing: 1.01px;
-    font-family: 'Chakra Petch', sans-serif;;
+    font-size: 12.4px;
+    letter-spacing: 2.1px;
+    line-height: 1.4rem;
+    font-family: 'Unbounded', cursive;
 
     @media only screen and (max-width: 1200px){
-      font-size: 15px;
+      font-size: 13px;
+      line-height: 1.1rem;
     }
   }
 `

@@ -218,9 +218,9 @@ function Mint() {
                 color: "var(--primary-text)",
               }}
             >
-              <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
+              {/* <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
                 {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
-              </StyledLink>
+              </StyledLink> */}
             </s.TextDescription>
             <s.SpacerSmall />
             {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
@@ -242,12 +242,12 @@ function Mint() {
               </>
             ) : (
               <>
-                <s.TextTitle
+                {/* <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
                   1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
                   {CONFIG.NETWORK.SYMBOL}.
-                </s.TextTitle>
+                </s.TextTitle> */}
                 <s.SpacerXSmall />
                 {/* <s.TextDescription
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
@@ -334,7 +334,7 @@ function Mint() {
                     </s.Container>
                     <s.SpacerSmall />
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <StyledButton
+                      <BuyButton
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
                           e.preventDefault();
@@ -343,7 +343,7 @@ function Mint() {
                         }}
                       >
                         {claimingNft ? "BUSY" : "BUY"}
-                      </StyledButton>
+                      </BuyButton>
                     </s.Container>
                   </>
                 )}
@@ -359,7 +359,7 @@ function Mint() {
           <s.TextDescription
             style={{
               textAlign: "center",
-              color: "var(--primary-text)",
+              color: "#fff",
             }}
           >
             Please make sure you are connected to the right network (
@@ -384,15 +384,80 @@ function Mint() {
 }
 
 
-const InDeButton = styled.button``
+const InDeButton = styled.button`
+  width: 30px;
+  height: 40px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #fff;
+  transition: all 0.3s ease 0s;
+  //box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73% ) 0px 16px 10px -10px;
 
-const ConButton = styled.button``
+ 
+&:hover{
+  background-color: #614993;
+  box-shadow: 0px 3px 3px -2px #614993,
+		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px #614993;
+color: #fff;
+transform: translateY(-3px);
+border: none;
+cursor: pointer;
+}
+`
+
+const ConButton = styled.button`
+width: 9rem;
+height: 3.5rem;
+margin: 30px 0;
+border: 1px solid #fff;
+background-color: transparent;
+color: black;
+font-family: 'Unbounded', cursive;
+letter-spacing: 1.2px;
+transition: all 0.3s ease 0s;
+
+
+&:hover{
+  background-color: #614993;
+  box-shadow: 0px 3px 3px -2px #614993,
+		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px #614993;
+color: #fff;
+transform: translateY(-7px);
+border: none;
+cursor: pointer;
+}
+
+`
+
+const BuyButton = styled.button`
+width: 9rem;
+height: 3.5rem;
+margin: 30px 0;
+border: 1px solid #fff;
+background-color: transparent;
+color: black;
+font-family: 'Unbounded', cursive;
+letter-spacing: 1.2px;
+transition: all 0.3s ease 0s;
+//box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73% ) 0px 16px 10px -10px;
+
+
+&:hover{
+  background-color: #614993;
+  box-shadow: 0px 3px 3px -2px #614993,
+		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px #614993;
+color: #fff;
+transform: translateY(-3px);
+border: 1px solid #614993;
+cursor: pointer;
+}
+`
 
 
 const Wrap = styled.div`
   width: 90%;
   height: 100%;
-  background: black;
+  background: transparant;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -402,12 +467,13 @@ const Wrap = styled.div`
 
 const ContainerMain = styled.div`
 width: 100%;
-height:70vh;
+min-height:70vh;
 display: flex;
 align-items: center;
+font-family: 'Unbounded', cursive;
 justify-content: center;  
-background: red;
-
+background-image: linear-gradient(to left top, #5c82e8, #6177d8, #646bc8, #6561b8, #6456a8, #6f59a8, #785ca8, #8160a8, #9872b8, #af85c9, #c798da, #deaceb);
+border-bottom: 3px solid hsla(224, 75%, 64%, 1);
 `
 
 const Box = styled.div`
@@ -416,7 +482,9 @@ const Box = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
 
 `
 export default Mint;
