@@ -34,10 +34,10 @@ Receive updates on future NFTs, and consult with each other. A percentage of all
             </LeftTwo> */}
             <RightTwo>
             <SocialIcons>
-                <a href='https://discord.com/'><FaDiscord style={{color: '#fff', margin: '0 30px '}}/></a> 
-                <a href='https://twitter.com/j10hunter'><FaTwitter style={{color: '#fff', margin: '0 30px '}} /></a>
-                <a href='https://t.me/Metamoths'><FaTelegram style={{color: '#fff', margin: '0 30px '}}/></a>
-                <a href='https://www.instagram.com/Metamoths'><FaInstagram style={{color: '#fff', margin: '0 30px '}}/></a>
+                <a href='https://discord.com/'><FaDiscord className='icon' /></a> 
+                <a href='https://twitter.com/j10hunter'><FaTwitter className='icon'  /></a>
+                <a href='https://t.me/Metamoths'><FaTelegram className='icon' /></a>
+                <a href='https://www.instagram.com/Metamoths'><FaInstagram className='icon' /></a>
        </SocialIcons>
             </RightTwo>
             </Body>
@@ -59,7 +59,7 @@ const Container = styled.div`
     border-top: 3px solid hsla(224, 75%, 64%, 1);
 
     @media only screen and (max-width: 1200px){
-        height: 260vh;
+        height: 230vh;
     }
 
 
@@ -235,7 +235,7 @@ const Head = styled.div`
 
         @media only screen and (max-width: 1200px){
             width: 100%;
-            padding: 30px 0;
+            padding: 20px 0;
         }
 
 
@@ -280,14 +280,21 @@ const SocialIcons = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  //border: 1px solid white;
- // border-radius: 15px;
   padding: 20px;
 
   @media only screen and (max-width: 1200px){
+    width: 90%;
     font-size: 80px;
     flex-wrap: wrap;
     padding: 0;
+}
+
+.icon{
+    margin: 0 30px;
+
+    @media only screen and (max-width: 1200px){
+        margin: 20px 30px;
+    }
 }
 
 `
