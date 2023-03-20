@@ -50,6 +50,7 @@ const Left = styled.div`
     justify-content: center;
 
     @media only screen and (max-width: 1200px){
+        display: none;
         padding: 20px;
     }
 
