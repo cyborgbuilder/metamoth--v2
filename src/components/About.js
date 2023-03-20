@@ -146,6 +146,11 @@ const Container = styled.div`
   //align-items: center;
   justify-content: center;
   font-family: 'Unbounded', cursive;
+  padding-bottom: 40px;
+
+  @media only screen and (max-width: 1200px){
+    padding-bottom: 0;
+  }
 `
 
 const Wrap = styled.div`

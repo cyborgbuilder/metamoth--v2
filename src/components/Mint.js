@@ -198,7 +198,7 @@ function Mint() {
       <Wrap>
       
         <s.SpacerSmall />
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+        {/* <ResponsiveWrapper flex={1} style={{ padding: 24 }} test> */}
          
           <s.SpacerLarge />
           <Box>
@@ -351,9 +351,9 @@ function Mint() {
             )}
             <s.SpacerMedium />
           </Box>
-          <s.SpacerLarge />
           
-        </ResponsiveWrapper>
+          
+        {/* </ResponsiveWrapper> */}
         <s.SpacerMedium />
         <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
           <s.TextDescription
@@ -455,13 +455,14 @@ cursor: pointer;
 
 
 const Wrap = styled.div`
-  width: 90%;
+  width: 95%;
   height: 100%;
   background: transparant;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0;
 
 `
 
